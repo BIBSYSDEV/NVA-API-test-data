@@ -1,0 +1,96 @@
+[
+  {
+    "PrimaryKeyHashKey": {
+      "S": "USER#user-internal-get@test.no"
+    },
+    "PrimaryKeyRangeKey": {
+      "S": "USER#user-internal-get@test.no"
+    },
+    "institution": {
+      "S": "1111111111"
+    },
+    "roles": {
+      "L": [
+        {
+          "M": {
+            "rolename": {
+              "S": "Creator"
+            },
+            "type": {
+              "S": "Role"
+            },
+            "accessRights": {
+              "L": [
+                {
+                  "S": "READ_DOI_REQUEST"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "familyName": {
+      "S": "TestUser"
+    },
+    "givenName": {
+      "S": "User internal GET"
+    },
+    "SecondaryIndex1RangeKey": {
+      "S": "user-internal-get@test.no"
+    },
+    "type": {
+      "S": "User"
+    },
+    "username": {
+      "S": "user-internal-get@test.no"
+    }
+  },
+  {
+    "PrimaryKeyHashKey": {
+      "S": "USER#user-internal-put@test.no"
+    },
+    "PrimaryKeyRangeKey": {
+      "S": "USER#user-internal-put@test.no"
+    },
+    "institution": {
+      "S": "1111111111"
+    },
+    "roles": {
+      "L": [
+        {
+          "M": {
+            "rolename": {
+              "S": "Creator"
+            },
+            "type": {
+              "S": "Role"
+            },
+            "accessRights": {
+              "L": [
+                {
+                  "S": "READ_DOI_REQUEST"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "familyName": {
+      "S": "TestUser"
+    },
+    "givenName": {
+      "S": "User internal PUT"
+    },
+    "SecondaryIndex1RangeKey": {
+      "S": "user-internal-put@test.no"
+    },
+    "type": {
+      "S": "User"
+    },
+    "username": {
+      "S": "user-internal-put@test.no"
+    }
+  }
+]
