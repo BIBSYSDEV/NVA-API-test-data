@@ -13,11 +13,17 @@
       "L": [
         {
           "M": {
-            "rolename": {
+            "name": {
               "S": "Creator"
             },
+            "PrimaryKeyHashKey": {
+              "S": "ROLE#Creator"
+            },
+            "PrimaryKeyRangeKey": {
+              "S": "ROLE#Creator"
+            },
             "type": {
-              "S": "Role"
+              "S": "ROLE"
             },
             "accessRights": {
               "L": [
@@ -40,7 +46,7 @@
       "S": "user-internal-get@test.no"
     },
     "type": {
-      "S": "User"
+      "S": "USER"
     },
     "username": {
       "S": "user-internal-get@test.no"
@@ -60,11 +66,17 @@
       "L": [
         {
           "M": {
-            "rolename": {
+            "name": {
               "S": "Creator"
             },
+            "PrimaryKeyHashKey": {
+              "S": "ROLE#Creator"
+            },
+            "PrimaryKeyRangeKey": {
+              "S": "ROLE#Creator"
+            },
             "type": {
-              "S": "Role"
+              "S": "ROLE"
             },
             "accessRights": {
               "L": [
@@ -87,7 +99,7 @@
       "S": "user-internal-put@test.no"
     },
     "type": {
-      "S": "User"
+      "S": "USER"
     },
     "username": {
       "S": "user-internal-put@test.no"
