@@ -1,11 +1,7 @@
 [
-    {
+  {
     "Name": "custom:application",
     "Value": "NVA"
-  },
-  {
-    "Name": "custom:identifiers",
-    "Value": "feide:api-test-user@test-no"
   },
   {
     "Name": "custom:applicationRoles",
@@ -45,15 +41,15 @@
   },
   {
     "Name": "custom:feideId",
-    "Value": "api-test-user@test-no"
+    "Value": "api-test-user@test.no"
   },
   {
     "Name": "custom:feideTargetedId",
-    "Value": "api-test-user@test-no"
+    "Value": "api-test-user@test.no"
   },
   {
     "Name": "email",
-    "Value": "api-test-user@test-no"
+    "Value": "api-test-user@test.no"
   },
   {
     "Name": "custom:affiliation",
