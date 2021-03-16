@@ -110,7 +110,8 @@ def create_resource(resource_template, customer, identifier, username, status):
 def create_registrations():
     print('Creating registrations...')
 
-    customer = find_customer(archiveName=ARCHIVE_NAME)
+    customer = 'https://api.dev.nva.aws.unit.no/customer/{}'.format(find_customer(archiveName=ARCHIVE_NAME))
+    print(customer)
     if customer != 'Not found':
         with open('resource.json') as resource_file:
             resource_template = json.load(resource_file)
