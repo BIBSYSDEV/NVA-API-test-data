@@ -1,0 +1,108 @@
+[
+  {
+    "PrimaryKeyHashKey": {
+      "S": "USER#user-internal-get@test.no"
+    },
+    "PrimaryKeyRangeKey": {
+      "S": "USER#user-internal-get@test.no"
+    },
+    "institution": {
+      "S": "1111111111"
+    },
+    "roles": {
+      "L": [
+        {
+          "M": {
+            "name": {
+              "S": "Creator"
+            },
+            "PrimaryKeyHashKey": {
+              "S": "ROLE#Creator"
+            },
+            "PrimaryKeyRangeKey": {
+              "S": "ROLE#Creator"
+            },
+            "type": {
+              "S": "ROLE"
+            },
+            "accessRights": {
+              "L": [
+                {
+                  "S": "READ_DOI_REQUEST"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "familyName": {
+      "S": "TestUser"
+    },
+    "givenName": {
+      "S": "User internal GET"
+    },
+    "SecondaryIndex1RangeKey": {
+      "S": "user-internal-get@test.no"
+    },
+    "type": {
+      "S": "USER"
+    },
+    "username": {
+      "S": "user-internal-get@test.no"
+    }
+  },
+  {
+    "PrimaryKeyHashKey": {
+      "S": "USER#user-internal-put@test.no"
+    },
+    "PrimaryKeyRangeKey": {
+      "S": "USER#user-internal-put@test.no"
+    },
+    "institution": {
+      "S": "1111111111"
+    },
+    "roles": {
+      "L": [
+        {
+          "M": {
+            "name": {
+              "S": "Creator"
+            },
+            "PrimaryKeyHashKey": {
+              "S": "ROLE#Creator"
+            },
+            "PrimaryKeyRangeKey": {
+              "S": "ROLE#Creator"
+            },
+            "type": {
+              "S": "ROLE"
+            },
+            "accessRights": {
+              "L": [
+                {
+                  "S": "READ_DOI_REQUEST"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "familyName": {
+      "S": "TestUser"
+    },
+    "givenName": {
+      "S": "User internal PUT"
+    },
+    "SecondaryIndex1RangeKey": {
+      "S": "user-internal-put@test.no"
+    },
+    "type": {
+      "S": "USER"
+    },
+    "username": {
+      "S": "user-internal-put@test.no"
+    }
+  }
+]

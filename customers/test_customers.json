@@ -1,0 +1,118 @@
+[
+  {
+    "archiveName": {
+      "S": "API Test Archive"
+    },
+    "createdDate": {
+      "S": "2021-01-01T10:19:41.231405Z"
+    },
+    "cristinId": {
+      "S": "https://api.cristin.no/v2/institutions/0000000000"
+    },
+    "displayName": {
+      "S": "API Test Customer GET by ID"
+    },
+    "feideOrganizationId": {
+      "S": "0000000000"
+    },
+    "identifier": {
+      "S": "###################"
+    },
+    "modifiedDate": {
+      "S": "2021-01-01T10:19:41.231405Z"
+    },
+    "name": {
+      "S": "API Test Customer GET by ID"
+    },
+    "shortName": {
+      "S": "TEST_CUSTOMER_GET_BY_ID"
+    }
+  },
+  {
+    "archiveName": {
+      "S": "API Test Archive"
+    },
+    "createdDate": {
+      "S": "2021-01-01T10:19:41.231405Z"
+    },
+    "cristinId": {
+      "S": "https://api.cristin.no/v2/institutions/0987654321"
+    },
+    "displayName": {
+      "S": "API Test Customer GET by CristinId"
+    },
+    "feideOrganizationId": {
+      "S": "0000000000"
+    },
+    "identifier": {
+      "S": "###################"
+    },
+    "modifiedDate": {
+      "S": "2021-01-01T10:19:41.231405Z"
+    },
+    "name": {
+      "S": "API Test Customer GET by CristinId"
+    },
+    "shortName": {
+      "S": "TEST_CUSTOMER_GET_BY_CRISTINID"
+    }
+  },
+  {
+    "archiveName": {
+      "S": "API Test Archive"
+    },
+    "createdDate": {
+      "S": "2021-01-01T10:19:41.231405Z"
+    },
+    "cristinId": {
+      "S": "https://api.cristin.no/v2/institutions/0000000000"
+    },
+    "displayName": {
+      "S": "API Test Customer GET by OrgNr"
+    },
+    "feideOrganizationId": {
+      "S": "1234567890"
+    },
+    "identifier": {
+      "S": "###################"
+    },
+    "modifiedDate": {
+      "S": "2021-01-01T10:19:41.231405Z"
+    },
+    "name": {
+      "S": "API Test Customer GET by OrgNr"
+    },
+    "shortName": {
+      "S": "TEST_CUSTOMER_GET_BY_ORGNR"
+    }
+  },
+  {
+    "archiveName": {
+      "S": "API Test Archive"
+    },
+    "createdDate": {
+      "S": "2021-01-01T10:19:41.231405Z"
+    },
+    "cristinId": {
+      "S": "https://api.cristin.no/v2/institutions/0000000000"
+    },
+    "displayName": {
+      "S": "API Test Customer PUT"
+    },
+    "feideOrganizationId": {
+      "S": "0000000000"
+    },
+    "identifier": {
+      "S": "###################"
+    },
+    "modifiedDate": {
+      "S": "2021-01-01T10:19:41.231405Z"
+    },
+    "name": {
+      "S": "API Test Customer PUT"
+    },
+    "shortName": {
+      "S": "TEST_CUSTOMER_UPDATE"
+    }
+  }
+]
