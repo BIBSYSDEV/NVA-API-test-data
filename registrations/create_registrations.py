@@ -7,7 +7,7 @@ dynamodb_client = boto3.client('dynamodb')
 
 RESOURCE_TABLE_NAME = 'nva_resources'
 CUSTOMERS_TABLENAME = 'nva_customers'
-ARCHIVE_NAME = 'API Test Archive'
+INSTITUTION_NAME = 'Test Institution'
 USER_NAME = 'api-test-user@test.no'
 
 
@@ -53,10 +53,10 @@ def delete_registrations():
                     print(e)
 
 
-def find_customer(archiveName):
+def find_customer(institutionName):
     customers = scan_items(tableName=CUSTOMERS_TABLENAME)
     for customer in customers:
-        if customer['archiveName']['S'] == archiveName:
+        if customer['name']['S'] == institutionName:
             return customer['identifier']['S']
     return 'Not found'
 
@@ -106,11 +106,21 @@ def create_resource(resource_template, customer, identifier, username, status):
     new_resource['type']['S'] = 'Resource'
     return new_resource
 
+def create_id_entry(identifier):
+    with open('id_entry.json') as id_entry_file:
+        id_entry_template = json.load(id_entry_file)
+        id_entry = copy.deepcopy(id_entry_template)
+        id_entry['PK0']['S'] = id_entry['PK0']['S'].replace('<ResourceId>', identifier)
+        id_entry['SK0']['S'] = id_entry['SK0']['S'].replace('<ResourceId>', identifier)
+        try:
+            response = dynamodb_client.put_item(TableName=RESOURCE_TABLE_NAME, Item=id_entry)
+        except:
+            print('Error creating idEntry for identifier: {}'.format(identifier)) 
 
 def create_registrations():
     print('Creating registrations...')
 
-    customer = 'https://api.dev.nva.aws.unit.no/customer/{}'.format(find_customer(archiveName=ARCHIVE_NAME))
+    customer = find_customer(institutionName=INSTITUTION_NAME)
     print(customer)
     if customer != 'Not found':
         with open('resource.json') as resource_file:
@@ -133,8 +143,9 @@ def create_registrations():
                 try:
                     response = dynamodb_client.put_item(TableName=RESOURCE_TABLE_NAME,
                                                         Item=resource)
-                except e:
-                    print(e)
+                except:
+                    print('Error creating Resource with identifier: {}'.format(identifier))
+                create_id_entry(identifier=identifier)
     else:
         print('Customer not found')
 

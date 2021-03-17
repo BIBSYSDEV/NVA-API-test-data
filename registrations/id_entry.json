@@ -1,0 +1,11 @@
+{
+    "PK0": {
+      "S": "IdEntry:<ResourceId>"
+    },
+    "SK0": {
+      "S": "IdEntry:<ResourceId>"
+    },
+    "type": {
+      "S": "IdEntry"
+    }
+  }
