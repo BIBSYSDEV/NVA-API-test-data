@@ -85,7 +85,7 @@ def create_resource_key(template, resource_type, identifier):
     return key
 
 
-def create_resource(resource_type, resource_template, customer, identifier, username, status):
+def create_resource_keys(resource_type, resource_template, customer, identifier, username, status):
     new_resource = copy.deepcopy(resource_template)
     new_resource['PK0']['S'] = create_pk0(pk0_template=str(
         new_resource['PK0']['S']), resource_type=resource_type, customer=customer, username=username)
@@ -93,11 +93,10 @@ def create_resource(resource_type, resource_template, customer, identifier, user
         new_resource['PK1']['S']), resource_type=resource_type, customer=customer, status=status)
     new_resource['PK2']['S'] = create_pk2(pk2_template=str(
         new_resource['PK2']['S']), resource_type=resource_type, customer=customer, identifier=identifier)
-    if type == 'Resource':
-        new_resource['PK3']['S'] = create_resource_key(
-            template=str(new_resource['PK3']['S']), resource_type=resource_type, identifier=identifier)
-        new_resource['SK3']['S'] = create_resource_key(
-            template=str(new_resource['SK3']['S']), resource_type=resource_type, identifier=identifier)
+    new_resource['PK3']['S'] = create_resource_key(
+        template=str(new_resource['PK3']['S']), resource_type=resource_type, identifier=identifier)
+    new_resource['SK3']['S'] = create_resource_key(
+        template=str(new_resource['SK3']['S']), resource_type=resource_type, identifier=identifier)
     new_resource['SK0']['S'] = create_resource_key(
         template=str(new_resource['SK0']['S']), resource_type=resource_type, identifier=identifier)
     new_resource['SK1']['S'] = create_resource_key(
@@ -128,7 +127,7 @@ def create_registration(title, customer, identifier):
         resource_template = json.load(resource_file)
     with open('test_registrations.json') as registration_template_file:
         registration_template = json.load(registration_template_file)
-        resource = create_resource(
+        resource = create_resource_keys(
             resource_type='Resource',
             resource_template=resource_template,
             customer=customer,
@@ -153,17 +152,17 @@ def create_registrations():
             titles = json.load(title_file)
             for title in titles:
                 identifier = str(uuid.uuid4())
-                if title['type'] == 'Resource':
-                    resource = create_registration(
-                        title=title['text'], customer=customer, identifier=identifier)
-                    print('Created registration with identifier: {} and title: {}'.format(
-                        identifier, title['text']))
-                    try:
-                        response = dynamodb_client.put_item(TableName=RESOURCE_TABLE_NAME,
-                                                            Item=resource)
-                    except:
-                        print(
-                            'Error creating Resource with identifier: {}'.format(identifier))
+                resource = create_registration(
+                    title=title['text'], customer=customer, identifier=identifier)
+                print('Created registration with identifier: {} and title: {}'.format(
+                    identifier, title['text']))
+                try:
+                    response = dynamodb_client.put_item(TableName=RESOURCE_TABLE_NAME,
+                                                        Item=resource)
+                    create_id_entry(identifier)
+                except:
+                    print(
+                        'Error creating Resource with identifier: {}'.format(identifier))
     else:
         print('Customer not found')
 
