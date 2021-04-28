@@ -1,0 +1,26 @@
+[
+    {
+        "text": "API test registration GET",
+        "type": "Resource"
+    },
+    {
+        "text": "API test registration PUT",
+        "type": "Resource"
+    },
+    {
+        "text": "API test registration DELETE",
+        "type": "Resource"
+    },
+    {
+        "text": "API test registration PUT publish",
+        "type": "Resource"
+    },
+    {
+        "text": "API test registration DoiRequest",
+        "type": "Resource"
+    },
+    {
+        "text": "API test registration Message",
+        "type": "Resource"
+    }
+]
