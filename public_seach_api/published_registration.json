@@ -1,0 +1,106 @@
+{
+    "createdDate": "2020-01-01T00:00:00.000000Z",
+    "entityDescription": {
+      "contributors": [
+        {
+          "affiliations": [
+            {
+              "id": "https://api.sandbox.nva.aws.unit.no/customer/f54c8aa9-073a-46a1-8f7c-dde66c853934",
+              "type": "Organization"
+            }
+          ],
+          "correspondingAuthor": false,
+          "identity": {
+            "arpId": "1592998838101",
+            "name": "TestUser, Withauthor",
+            "type": "Identity"
+          },
+          "sequence": 1,
+          "type": "Contributor"
+        },
+        {
+          "affiliations": [
+            {
+              "id": "https://api.sandbox.nva.aws.unit.no/customer/f54c8aa9-073a-46a1-8f7c-dde66c853934",
+              "type": "Organization"
+            },
+            {
+              "id": "20202.0.0.0",
+              "type": "Organization"
+            }
+          ],
+          "correspondingAuthor": true,
+          "email": "test-user-with-author@test.no",
+          "identity": {
+            "arpId": "https://api.dev.nva.aws.unit.no/person/1605776533684",
+            "name": "TestUser,Withauthor",
+            "type": "Identity"
+          },
+          "sequence": 1,
+          "type": "Contributor"
+        }
+      ],
+      "date": {
+        "day": "01",
+        "month": "01",
+        "type": "PublicationDate",
+        "year": "2020"
+      },
+      "language": "http://lexvo.org/id/iso639-3/eng",
+      "mainTitle": "API test public search",
+      "reference": {
+        "doi": "",
+        "publicationContext": {
+          "level": "LEVEL_1",
+          "openAccess": false,
+          "peerReviewed": false,
+          "title": "British Journal of Neurosurgery",
+          "type": "Journal"
+        },
+        "publicationInstance": {
+          "pages": {
+            "type": "Range"
+          },
+          "peerReviewed": false,
+          "type": "JournalArticle"
+        },
+        "type": "Reference"
+      },
+      "tags": [
+        "Test"
+      ],
+      "type": "EntityDescription"
+    },
+    "fileSet": {
+      "files": [
+        {
+          "administrativeAgreement": false,
+          "identifier": "945950b6-1bf0-46ee-925a-dcab84cae7bd",
+          "license": {
+            "identifier": "CC BY",
+            "labels": {
+              "nb": "CC BY"
+            },
+            "type": "License"
+          },
+          "mimeType": "text/plain",
+          "name": "lorem_ipsum.txt",
+          "publisherAuthority": false,
+          "size": 453,
+          "type": "File"
+        }
+      ],
+      "type": "FileSet"
+    },
+    "identifier": "6dc6a12c-59b6-4af7-83a8-10f39750f22f",
+    "modifiedDate": "2020-01-01T00:00:00.000000Z",
+    "owner": "api-test-user@test.no",
+    "publisher": {
+      "id": "https://api.dev.nva.aws.unit.no/customer/9c1c941f-c713-4900-8482-f7d2684fc630",
+      "type": "Organization"
+    },
+    "publisherId": "https://api.dev.nva.aws.unit.no/customer/9c1c941f-c713-4900-8482-f7d2684fc630",
+    "publisherOwnerDate": "https://api.dev.nva.aws.unit.no/customer/9c1c941f-c713-4900-8482-f7d2684fc630#test-user-with-author@test.no#2020-01-01T00:00:00.000000Z",
+    "status": "PUBLISHED",
+    "type": "Resource"
+  }

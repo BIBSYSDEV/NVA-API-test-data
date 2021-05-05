@@ -5,7 +5,7 @@ import copy
 
 dynamodb_client = boto3.client('dynamodb')
 
-RESOURCE_TABLE_NAME = 'nva_resources'
+RESOURCE_TABLE_NAME = 'nva-resources-nva-publication-api-nva-publication-api'
 CUSTOMERS_TABLENAME = 'nva_customers'
 INSTITUTION_NAME = 'Test Institution'
 USER_NAME = 'api-test-user@test.no'
