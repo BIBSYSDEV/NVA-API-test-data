@@ -1,0 +1,58 @@
+[
+    {
+    "familyName": {
+      "S": "TestUser"
+    },
+    "givenName": {
+      "S": "API Existing User"
+    },
+    "institution": {
+      "S": "https://api.dev.nva.aws.unit.no/customer/f54c8aa9-073a-46a1-8f7c-dde66c853934"
+    },
+    "PrimaryKeyHashKey": {
+      "S": "USER#test-user-api-existing-user@test.no"
+    },
+    "PrimaryKeyRangeKey": {
+      "S": "USER#test-user-api-existing-user@test.no"
+    },
+    "roles": {
+      "L": [
+        {
+          "M": {
+            "accessRights": {
+              "L": [
+                {
+                  "S": "READ_DOI_REQUEST"
+                }
+              ]
+            },
+            "name": {
+              "S": "Creator"
+            },
+            "PrimaryKeyHashKey": {
+              "S": "ROLE#Creator"
+            },
+            "PrimaryKeyRangeKey": {
+              "S": "ROLE#Creator"
+            },
+            "type": {
+              "S": "ROLE"
+            }
+          }
+        }
+      ]
+    },
+    "SecondaryIndex1HashKey": {
+      "S": "https://api.dev.nva.aws.unit.no/customer/f54c8aa9-073a-46a1-8f7c-dde66c853934"
+    },
+    "SecondaryIndex1RangeKey": {
+      "S": "test-user-api-existing-user@test.no"
+    },
+    "type": {
+      "S": "USER"
+    },
+    "username": {
+      "S": "test-user-api-existing-user@test.no"
+    }
+  }
+]
