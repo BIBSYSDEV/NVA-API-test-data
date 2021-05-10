@@ -1,6 +1,8 @@
 {
     "createdDate": "2020-01-01T00:00:00.000000Z",
     "entityDescription": {
+      "abstract": "public_search_abstract",
+      "description": "public_search_description",
       "contributors": [
         {
           "affiliations": [
@@ -12,7 +14,7 @@
           "correspondingAuthor": false,
           "identity": {
             "arpId": "1592998838101",
-            "name": "TestUser, Withauthor",
+            "name": "TestUser, public_search_contributor_name",
             "type": "Identity"
           },
           "sequence": 1,
@@ -44,10 +46,10 @@
         "day": "01",
         "month": "01",
         "type": "PublicationDate",
-        "year": "2020"
+        "year": "2222"
       },
       "language": "http://lexvo.org/id/iso639-3/eng",
-      "mainTitle": "API test public search",
+      "mainTitle": "API_test_public_search_title",
       "reference": {
         "doi": "",
         "publicationContext": {
