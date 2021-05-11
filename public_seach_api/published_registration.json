@@ -1,5 +1,5 @@
 {
-    "createdDate": "2020-01-01T00:00:00.000000Z",
+    "createdDate": "2222-01-01",
     "entityDescription": {
       "abstract": "public_search_abstract",
       "description": "public_search_description",
@@ -51,25 +51,27 @@
       "language": "http://lexvo.org/id/iso639-3/eng",
       "mainTitle": "API_test_public_search_title",
       "reference": {
-        "doi": "",
+        "doi": "public_search_reference_doi",
         "publicationContext": {
           "level": "LEVEL_1",
-          "openAccess": false,
-          "peerReviewed": false,
-          "title": "British Journal of Neurosurgery",
-          "type": "Journal"
+          "openAccess": true,
+          "title": "public_search_reference_title",
+          "type": "Journal",
+          "url": "http://public_search_url"
         },
         "publicationInstance": {
           "pages": {
             "type": "Range"
           },
           "peerReviewed": false,
-          "type": "JournalArticle"
+          "type": "JournalArticle",
+          "issue": "public_search_issue",
+          "articleNumber":"public_search_article"
         },
         "type": "Reference"
       },
       "tags": [
-        "Test"
+        "public_search_tags"
       ],
       "type": "EntityDescription"
     },
@@ -95,8 +97,8 @@
       "type": "FileSet"
     },
     "identifier": "6dc6a12c-59b6-4af7-83a8-10f39750f22f",
-    "modifiedDate": "2020-01-01T00:00:00.000000Z",
-    "owner": "api-test-user@test.no",
+    "modifiedDate": "2222-01-01",
+    "owner": "public_search_owner@test.no",
     "publisher": {
       "id": "https://api.dev.nva.aws.unit.no/customer/9c1c941f-c713-4900-8482-f7d2684fc630",
       "type": "Organization"
