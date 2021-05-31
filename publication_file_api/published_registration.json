@@ -1,0 +1,110 @@
+{
+    "createdDate": "2222-01-01",
+    "entityDescription": {
+      "abstract": "public_search_abstract",
+      "description": "public_search_description",
+      "contributors": [
+        {
+          "affiliations": [
+            {
+              "id": "https://api.sandbox.nva.aws.unit.no/customer/f54c8aa9-073a-46a1-8f7c-dde66c853934",
+              "type": "Organization"
+            }
+          ],
+          "correspondingAuthor": false,
+          "identity": {
+            "arpId": "1592998838101",
+            "name": "TestUser, public_search_contributor_name",
+            "type": "Identity"
+          },
+          "sequence": 1,
+          "type": "Contributor"
+        },
+        {
+          "affiliations": [
+            {
+              "id": "https://api.sandbox.nva.aws.unit.no/customer/f54c8aa9-073a-46a1-8f7c-dde66c853934",
+              "type": "Organization"
+            },
+            {
+              "id": "20202.0.0.0",
+              "type": "Organization"
+            }
+          ],
+          "correspondingAuthor": true,
+          "email": "test-user-with-author@test.no",
+          "identity": {
+            "arpId": "https://api.dev.nva.aws.unit.no/person/1605776533684",
+            "name": "TestUser,Withauthor",
+            "type": "Identity"
+          },
+          "sequence": 1,
+          "type": "Contributor"
+        }
+      ],
+      "date": {
+        "day": "01",
+        "month": "01",
+        "type": "PublicationDate",
+        "year": "2222"
+      },
+      "language": "http://lexvo.org/id/iso639-3/eng",
+      "mainTitle": "API_test_public_search_title",
+      "reference": {
+        "doi": "public_search_reference_doi",
+        "publicationContext": {
+          "level": "LEVEL_1",
+          "openAccess": true,
+          "title": "public_search_reference_title",
+          "type": "Journal",
+          "url": "http://public_search_url"
+        },
+        "publicationInstance": {
+          "pages": {
+            "type": "Range"
+          },
+          "peerReviewed": false,
+          "type": "JournalArticle",
+          "issue": "public_search_issue",
+          "articleNumber":"public_search_article"
+        },
+        "type": "Reference"
+      },
+      "tags": [
+        "public_search_tags"
+      ],
+      "type": "EntityDescription"
+    },
+    "fileSet": {
+      "files": [
+        {
+          "administrativeAgreement": false,
+          "identifier": "945950b6-1bf0-46ee-925a-dcab84cae7bd",
+          "license": {
+            "identifier": "CC BY",
+            "labels": {
+              "nb": "CC BY"
+            },
+            "type": "License"
+          },
+          "mimeType": "text/plain",
+          "name": "lorem_ipsum.txt",
+          "publisherAuthority": false,
+          "size": 453,
+          "type": "File"
+        }
+      ],
+      "type": "FileSet"
+    },
+    "identifier": "6dc6a12c-59b6-4af7-83a8-10f39750f22f",
+    "modifiedDate": "2222-01-01",
+    "owner": "public_search_owner@test.no",
+    "publisher": {
+      "id": "https://api.dev.nva.aws.unit.no/customer/9c1c941f-c713-4900-8482-f7d2684fc630",
+      "type": "Organization"
+    },
+    "publisherId": "https://api.dev.nva.aws.unit.no/customer/9c1c941f-c713-4900-8482-f7d2684fc630",
+    "publisherOwnerDate": "https://api.dev.nva.aws.unit.no/customer/9c1c941f-c713-4900-8482-f7d2684fc630#test-user-with-author@test.no#2020-01-01T00:00:00.000000Z",
+    "status": "PUBLISHED",
+    "type": "Resource"
+  }
