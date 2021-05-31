@@ -10,7 +10,8 @@ USER_POOL_ID = ssm.get_parameter(Name='/test/AWS_USER_POOL_ID',
 CLIENT_ID = ssm.get_parameter(Name='/test/AWS_USER_POOL_WEB_CLIENT_ID',
                               WithDecryption=False)['Parameter']['Value']
 USER_NAME = 'api-test-user@test.no'
-API_ENDPOINT = 'https://api.dev.nva.aws.unit.no/publication'
+API_ENDPOINT = 'https://api.sandbox.nva.aws.unit.no/publication'
+RESOURCE_TABLE_NAME = 'nva-resources-nva-publication-api-master-deploy-nva-publication-api'
 
 def login(username):
     client = boto3.client('cognito-idp')
@@ -31,6 +32,35 @@ def login(username):
         })
     return response['AuthenticationResult']['IdToken']
 
+def scan_items(tableName):
+    print('scanning items')
+    response = dynamodb_client.scan(TableName=tableName)
+    scanned_items = response['Items']
+    more_items = 'LastEvaluatedKey' in response
+    while more_items:
+        start_key = response['LastEvaluatedKey']
+        response = dynamodb_client.scan(
+            TableName=RESOURCE_TABLE_NAME, ExclusiveStartKey=start_key)
+        scanned_items.extend(response['Items'])
+        more_items = 'LastEvaluatedKey' in response
+    return scanned_items
+
+def delete_registrations(bearer_token):
+    print('deleting registrations...')
+    resources = scan_items(RESOURCE_TABLE_NAME)
+    for resource in resources:
+        if resource['type']['S'] == 'Resource':
+            registration = resource['data']['M']
+            identifier = registration['identifier']['S']
+            owner = registration['owner']['S']
+            if USER_NAME in owner:
+                headers = {
+                    'Authorization': 'Bearer {}'.format(bearer_token),
+                    'Accept': 'application/json'
+                }
+                delete_url = '{}/{}'.format(API_ENDPOINT, identifier)
+                deleteResponse = requests.delete(url = delete_url, headers = headers)
+
 def create_registration(registration):
     print('creating registration...')
     with open('published_registration.json') as registration_template_file:
@@ -50,7 +80,9 @@ def create_registrations(bearer_token):
                 'Authorization': 'Bearer {}'.format(bearer_token),
                 'Accept': 'application/json'
             }
+            print (headers)
             createResponse = requests.post(url = API_ENDPOINT, json = new_registration, headers = headers)
+            print(createResponse.__dict__)
             identifier = createResponse.json()['identifier']
             publish_url = '{}/{}/publish'.format(API_ENDPOINT, identifier)
             requests.put(url = publish_url, headers = headers)
