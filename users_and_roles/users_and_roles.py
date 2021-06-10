@@ -1,7 +1,5 @@
 import boto3
 import json
-import uuid
-import copy
 
 users_roles_tablename = 'UsersAndRolesTable'
 user_file_name = 'users.json'

@@ -65,7 +65,7 @@
           }
         },
         "language": {
-          "S": "http://lexvo.org/id/iso639-3/eng"
+          "S": "https://lexvo.org/id/iso639-3/eng"
         },
         "mainTitle": {
           "S": "Registration API test registration"

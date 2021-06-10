@@ -48,7 +48,7 @@
         "type": "PublicationDate",
         "year": "2222"
       },
-      "language": "http://lexvo.org/id/iso639-3/eng",
+      "language": "https://lexvo.org/id/iso639-3/eng",
       "mainTitle": "API_test_public_search_title",
       "reference": {
         "doi": "public_search_reference_doi",
@@ -57,7 +57,7 @@
           "openAccess": true,
           "title": "public_search_reference_title",
           "type": "Journal",
-          "url": "http://public_search_url"
+          "url": "https://public_search_url"
         },
         "publicationInstance": {
           "pages": {
